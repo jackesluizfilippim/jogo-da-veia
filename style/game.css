@@ -1,0 +1,89 @@
+  body {
+        background-image: url('../img/plano\ de\ fundo.jpg');
+        background-size: cover; /* A imagem cobre toda a área */
+        background-repeat: no-repeat; /* Não repete a imagem */
+        background-position: center; /* Centraliza a imagem */
+    }
+   
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: '', sans-serif;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.winning-message {
+    display: none; /* Oculta a mensagem de vitória inicialmente */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.winning-message-text {
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+
+.winning-message-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.winning-message-button:hover {
+    background-color: #0056b3;
+}
